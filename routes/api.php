@@ -22,3 +22,20 @@ Route::put('/categories/{id}', [App\Http\Controllers\ItemCategoryController::cla
 
 //Delete category by ID
 Route::delete('/categories/{id}', [App\Http\Controllers\ItemCategoryController::class, 'destroy']); 
+
+//For items table
+
+//Get all items
+Route::get('/items', [App\Http\Controllers\ItemsController::class, 'index']);
+
+//Get single item
+Route::get('/items/{id}', [App\Http\Controllers\ItemsController::class, 'show']);
+
+//Create new item
+Route::post('/items', [App\Http\Controllers\ItemsController::class, 'store']);
+
+//Update item
+Route::put('/items/{id}', [App\Http\Controllers\ItemsController::class, 'update']);
+
+//Delete item
+Route::delete('/items/{id}', [App\Http\Controllers\ItemsController::class, 'destroy']); 
