@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
         'profilePicture'=> '',
         ]);
 
-        $this->call(ItemCategorySeeder::class);
+        $this->call([
+        ItemCategorySeeder::class, 
+        ItemSeeder::class,
+        ]);
     }
 }
